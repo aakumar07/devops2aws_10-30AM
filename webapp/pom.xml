@@ -29,6 +29,19 @@
     </dependency>
   </dependencies>
 
+   <distributionManagement>
+		 <snapshotRepository>
+		    <id>nexusRepo</id>
+		    <url>http://18.220.65.82:8081/repository/sample-snapshot/</url>
+		 </snapshotRepository>
+		
+		 <repository>
+		    <id>nexusRepo</id>
+		    <url>http://18.220.65.82:8081/repository/sample-release/</url>
+		 </repository>
+  </distributionManagement>
+
+
   <build>
     <finalName>webapp</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
