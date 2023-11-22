@@ -13,7 +13,8 @@ pipeline{
 	 }
 	stage("maven package"){
 	  steps{
-	    sh "mvn -f /var/lib/jenkins/workspace/GM_pipeline_job/Maven/webapp/pom.xml clean package"
+	    sh "mvn -f /var/lib/jenkins/workspace/GM_pipeline_job/webapp/pom.xml clean package"
+                        
 		}
 	  }
 	 }
