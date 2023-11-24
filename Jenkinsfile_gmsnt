@@ -38,7 +38,7 @@ pipeline {
   stage("deploying the war to tomcat webserver"){
    steps{
     sshagent(['tomcat']) {
-      sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Pipeline_Job_GMSNT/webapp/target/webapp.war  ec2-user@18.222.180.194:/opt/apache-tomcat-9.0.83/webapps/'
+      sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Pipeline_Job_GMSNT/webapp/target/webapp.war  ec2-user@18.222.180.194:/home/ec2-user/apache-tomcat-9.0.83/webapps/'
   }
    }
   }
