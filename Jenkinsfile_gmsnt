@@ -22,7 +22,7 @@ pipeline {
       nexusArtifactUploader artifacts: [
         [
         artifactId: 'webapp', classifier: '', 
-        file: '/var/lib/jenkins/workspace/Pipeline_job_GMSNT/webapp/target/webapp.war', 
+        file: '/var/lib/jenkins/workspace/Pipeline_Job_GMSNT/webapp/target/webapp.war', 
         type: 'war'
       ]
     ], 
