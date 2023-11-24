@@ -1,0 +1,16 @@
+=====
+connect the all required instance in aws console
+
+==> Jenkins==>8080
+==> SonarQube==> 9000
+==> Nexus ===>8081
+==> Tomcat==> 8080
+
+==> Automatung the job entair project
+
+step1==> Git Clone==> Jenkinsfile created in github acoount and configure in pipeline job
+step2==> code scan==> sonarqube==> script need pass the sonar command==> sonr configuration in jenkins==>jenkins system configurations
+===> pom.xml==> porperties tab same public ip replace
+step3==> Mvn build==> sh commnds pass in jenkins pipeline
+step4==> Nexus backup==>pipeline job nexus artifact uploder==> scritp file add ==>pom.xml need to update distrubution managemnet tab
+step5==> tomcat ==> pipeline ssh agent==>
