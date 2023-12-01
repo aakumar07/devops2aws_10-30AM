@@ -1,0 +1,72 @@
+
+Jenkins : master /slave concept.
+
+master : jenkins install -->> instance ==>> master.
+
+slaves / nodes ===>> another instances. ===>> we need to create slaves / nodes.
+
+The main purpose of master/ slave is to distributing the builds.
+
+===>> jenkins ==>> lot of jobs create ==>> load increase ==> more CPU / memory / network utilization increase ==>> jenkins instance ==>> hung state.
+
+to over come this master / slave concept came into the picture.
+
+By using master / slave concept ==> we will create the jobs in jenkins master and that jobs are build in slave nodes.
+
+The communication between master and slave is SSH 
+
+The communication between master and slave protocall is  TCP / IP
+
+key point :1. we need to install jenkins in master only.
+
+2. We need not to install jenkins on slave / nodes.
+
+3. Basic rule : java installation is mandatory.
+
+--->> master instance ==>> only one instance
+
+===>> nodes will be n no.of instances.
+
+==>> In real time each node can be treated as one environment.
+
+Dev , QA , UAT , PROD.
+
+===>>> each node ===>> tomcat instances.
+
+The jobs are running between master and slave by using labels.
+
+No operating system dependency between master and slaves / nodes.
+
+jenkins ==>> linux and slaves ==>> windows ,centos , debian...etc.
+
+=====================================================================================
+
+How to create users in jenkins ??
+
+jenkins dashboard ==>> manage jenkins ==>> manage users ==> create user ==>> bhargavi , password , conform password , email..
+
+=============================================================================================================
+
+how take backup of the jenkins instance.
+
+Backup ==>>> plugin ===>>> thinbackup plugin will install.
+
+=============================================================================================================
+
+How to provide security to the jenkins instance..
+
+1. Autherization.
+
+2. Authentication.
+
+3. security realrms
+
+4. role based strategy plugins.
+
+1. Autherization. ===>>> IBM emp ==>>>> empid ===>> correct or not..
+
+2.  Authentication. ==>> jenkins passowrd ==>> correct or not.
+
+3. security realrms ===> LDAP / AD ===>> every 3 months once will change the passowrd. ===>>> the password comes from ldap / AD or not.
+
+4. role based strategy plugins. : intsall ==>> dev enviroment or QA or UAT or PROD. ===>> which types environment you have the access.
