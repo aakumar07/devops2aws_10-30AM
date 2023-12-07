@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+  	
+
+  stages{
+    stage("git clone"){
+      steps{
+        git branch: 'main', credentialsId: '1cf5b69f-50dc-4bd1-ba59-2a7a3d1f8cde', url: 'https://github.com/aakumar07/devops2aws_11-30AM.git'
+      }
+    }
+	stage ("ansible"){
+	  steps{
+	    ansiblePlaybook become: true, credentialsId: 'ansible2', installation: 'ansible2', inventory: 'myinventory', playbook: 'ping.yml', vaultTmpPath: ''
+		}
+	}
+ }
+}
