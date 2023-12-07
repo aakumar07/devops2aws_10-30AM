@@ -8,7 +8,7 @@ pipeline {
     }
 	stage ("ansible"){
 	  steps{
-            ansiblePlaybook credentialsId: 'private_key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'myinventory', playbook: 'ping.yml', vaultTmpPath: ''
+            ansiblePlaybook credentialsId: 'private_key', disableHostKeyChecking: true, installation: 'ansible2', inventory: '/var/lib/jenkins/workspace/ansible_pipeline/myinventory', playbook: '/var/lib/jenkins/workspace/ansible_pipeline/ping.yml', vaultTmpPath: ''
              }
    }
  }
