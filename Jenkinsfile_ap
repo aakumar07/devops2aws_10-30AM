@@ -10,8 +10,8 @@ pipeline {
     }
 	stage ("ansible"){
 	  steps{
-	    ansiblePlaybook become: true, becomeUser: 'ec2-user', credentialsId: 'ansible2', installation: 'ansible2', inventory: '/var/lib/jenkins/workspace/ansible_pipe/ansible-app/myinventory', playbook: '/var/lib/jenkins/workspace/ansible_pipe/ansible-app/ping.yml', vaultTmpPath: ''
-		}
-	}
+	    ansiblePlaybook credentialsId: 'ansible2', disableHostKeyChecking: true, installation: 'ansible2', inventory: '/var/lib/jenkins/workspace/ansible_pipe/ansible-app/myinventory', playbook: '/var/lib/jenkins/workspace/ansible_pipe/ansible-app/ping.yml', vaultTmpPath: ''
+    }
+   }
  }
 }
