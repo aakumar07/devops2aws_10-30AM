@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become : true
+  tasks:
+    - name: Installing Http serve
+      yum: name=httpd state=present
+    - name: Starting the httpd server
+      service:  name=httpd state=started
+    - name: Insert Index Page
+      template:
+       src: index.html
+       dest: /var/www/html/index.html
+
