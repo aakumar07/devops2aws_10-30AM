@@ -1,5 +1,5 @@
-node1 ansible_host=13.58.204.23
-node2 ansible_host=13.59.156.218
+node1 ansible_host=3.129.68.67
+node2 ansible_host=18.117.161.148
 
 [mygroup]
 node1
