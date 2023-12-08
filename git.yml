@@ -2,4 +2,5 @@
 - hosts : all
   become : true
   tasks:
-    yum : name = "git" state = "present"
+   - name : "Installing git"
+     yum : name = "git" state = "present"
