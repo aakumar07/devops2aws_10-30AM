@@ -1,5 +1,5 @@
-node1 ansible_host=3.128.34.52
-node2 ansible_host=3.145.131.124
+node1 ansible_host=13.58.204.23
+node2 ansible_host=13.59.156.218
 
 [mygroup]
 node1
@@ -10,4 +10,3 @@ mygroup
 
 [allservers:vars]
 ansible_user=ec2-user
-ansible_ssh_private_key_file=/tmp/key_connect.pem
